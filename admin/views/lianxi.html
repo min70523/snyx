@@ -1,0 +1,237 @@
+<link rel="stylesheet" href="/sn/public/css/lianxi.css">
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Hy39puRjkD52O5l2T0ne7ZpSepVNY3fN"></script>
+<body>
+<section class="banner">
+    <img src="../../public/images/banner1.jpg" alt="">
+
+    <!-- 遮罩 -->
+    <div class="shade">
+        <div class="center">
+            <div class="content1"></div>
+            <div class="colors"></div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 主体内容开始 -->
+<section class="main">
+    <div class="top">
+        <div class="top1">
+            <div class="top2"></div>
+        </div>
+    </div>
+
+    <section class="title">
+        <div class="left"><a href="/sn/index.php/home/index">首页</a></div>
+        <div class="center">>></div>
+        <div class="right"><a href="javascript:;">联系我们</a></div>
+    </section>
+
+
+    <div class="contact">
+        <div class="tit">
+            <div class="blue"></div>
+            <div class="zjian">
+                <P class="tra">Latest Information</P>
+                <span class="zw">联系我们</span>
+                <div class="hxian"></div>
+                <ul class="three">
+                    <li>
+                        <img src="/sn/public/images/16.png" alt="">
+                        <p class="xxi">联系电话 : 020-000-0000</p>
+                    </li>
+                    <li>
+                        <img src="/sn/public/images/15.png" alt="">
+                        <p class="xxi">公司地址：太原市小店区学府街XX号XX</p>
+                    </li>
+                    <li>
+                        <img src="/sn/public/images/14.png" alt="">
+                        <p class="xxi">联系邮箱：contact@fkadjkhsf.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="violet"></div>
+        </div>
+
+        <div class="map">
+            <!--<div id="myPageTop">-->
+                <!--<a href="javascript:void(0);" id="show">-->
+                    <!--点击试试———路线工具（展开/收缩）-->
+                <!--</a>-->
+                <!--<div class="pageShow">-->
+                    <!--<h3>搜索地址</h3>-->
+                    <!--<input id="local" placeholder="模糊地址搜索">-->
+                    <!--<span>—&nbsp;—</span>-->
+                    <!--<a id="city" href="javascript:void(0);">-->
+                        <!--点击搜索-->
+                    <!--</a>-->
+
+                    <!--<h3>搜索行车路径</h3>-->
+                    <!--<input id="star" placeholder="行车开始地址">-->
+                    <!--<span>—&nbsp;—</span>-->
+                    <!--<input id="end" placeholder="行车结束地址">-->
+                    <!--<span>—&nbsp;—</span>-->
+                    <!--<a id="car" href="javascript:void(0);">-->
+                        <!--点击搜索-->
+                    <!--</a>-->
+
+                    <!--<h3>搜索公交路径</h3>-->
+                    <!--<input id="bStar" placeholder="公交开始地址">-->
+                    <!--<span>—&nbsp;—</span>-->
+                    <!--<input id="bEnd" placeholder="公交结束地址">-->
+                    <!--<span>—&nbsp;—</span>-->
+                    <!--<a id="bus" href="javascript:void(0);">-->
+                        <!--点击搜索-->
+                    <!--</a>-->
+
+                    <!--<h3>搜索步行路径</h3>-->
+                    <!--<input id="wStar" placeholder="步行开始地址">-->
+                    <!--<span>—&nbsp;—</span>-->
+                    <!--<input id="wEnd" placeholder="步行结束地址">-->
+                    <!--<span>—&nbsp;—</span>-->
+                    <!--<a id="walk" href="javascript:void(0);">-->
+                        <!--点击搜索-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div id="container"></div>
+            <div id="panel"></div>
+        </div>
+
+        <div class="nrong">
+            <span class="zw1">意见留言 CONTRACT</span>
+            <div class="hxian1"></div>
+            <ul class="address">
+                <li class="left1">
+                    <p class="wzi9" >ADVERTISING广告策划有限公司
+                        <br/>
+                        <br/>
+                        联系邮箱：contact@fkadjkhsf.com
+                        <br/>
+                        联系传真：020-000000
+                        <br/>
+                        联系电话：020-000000 400-000000
+                        <br/>
+                        联系地址：山西省太原市小店区平阳路</p>
+                </li>
+                <div class="rig">
+                    <form>
+                        <div class="exam">
+                            姓名: <input type="text" name="mname" size="45"  placeholder="请输入姓名">
+                        </div>
+                        <div class="exam1">
+                            电话: <input type="text" name="mphone" size="45" placeholder="请输入电话">
+                        </div>
+                        <div class="exam2">
+                            留言: <textarea name="mes" id="" cols="44" rows="6" placeholder="提出您的建议或者意见"></textarea>
+                        </div>
+                        <div class="exam3">
+                            <input type="submit" value="提交" style="width:100px;">
+                        </div>
+                    </form>
+                </div>
+            </ul>
+
+            <!--<ul class="qq">-->
+                <!--<li>-->
+                    <!--<img src="/sn/public/images/.png" alt="">-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<img src="/sn/public/images/.png" alt="">-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<img src="/sn/public/images/.png" alt="">-->
+                <!--</li>-->
+            <!--</ul>-->
+
+        </div>
+    </div>
+</section>
+<script>
+    $(function() {
+        // 创建地图实例
+        var map = new BMap.Map("container");
+        // 洪泽湖坐标
+        var point = new BMap.Point(112.55, 37.87);
+        map.centerAndZoom(point, 12);
+        map.addControl(new BMap.ScaleControl());
+        map.addControl(new BMap.OverviewMapControl());
+        map.addControl(new BMap.MapTypeControl());
+        //启用滚动放大
+        map.enableScrollWheelZoom()
+        // 创建标注
+        var marker = new BMap.Marker(point);
+        marker.enableDragging();
+        //本地搜索
+        var local = new BMap.LocalSearch(map, {
+            renderOptions: {map: map}
+        });
+        local.search('太原市');
+
+        //驾车路线
+        var driving = new BMap.DrivingRoute(map, {
+            renderOptions: {
+                map: map,
+                autoViewport: true
+            }
+        });
+        //步行路线
+        var walking = new BMap.WalkingRoute(map, {
+            renderOptions: {
+                map: map
+            }
+        });
+        //公交路线
+        var transit = new BMap.TransitRoute(map, {
+            renderOptions: {map: map, panel: "results"}
+        });
+        $(function () {
+            // 地址搜索
+            $('#city').on('click', function () {
+                $('.pageShow').slideToggle();
+                local.search($('#local').val());
+            })
+            // 行车
+            $('#car').on('click', function () {
+                $('.pageShow').slideToggle();
+                driving.search($('#star').val(), $('#end').val());
+            })
+            // 公交
+            $('#bus').on('click', function () {
+                $('.pageShow').slideToggle();
+                transit.search($('#bStar').val(), $('#bEnd').val());
+            })
+            // 步行
+            $('#walk').on('click', function () {
+                $('.pageShow').slideToggle();
+                walking.search($('#wStar').val(), $('#wEnd').val());
+            })
+        })
+
+        $("#show").on('click', function () {
+            $('.pageShow').slideToggle();
+        })
+
+//        留言提交
+        let sub=$(':submit');
+      sub.on('click',function(){
+          let data=$('form').serialize();
+          $.ajax({
+              url:'/sn/index.php/message/insertmessage',
+              data:data,
+              method:'post',
+              success:function(data){
+                  if(data == 'ok'){
+                      alert('提交成功 ');
+                      location.href='/sn/index.php/home/lianxi';
+                  }else if(data == 'error'){
+                      alert('提交失败，请重试 ');
+                  }
+              }
+          })
+return false;
+      })
+
+    })
+</script>
